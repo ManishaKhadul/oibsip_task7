@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login Authentication</h2>
+        <div id="login-form" class="form">
+            <h3>Login</h3>
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="javascript:void(0);" onclick="showRegister()">Register</a></p>
+        </div>
+
+        <div id="register-form" class="form" style="display: none;">
+            <h3>Register</h3>
+            <input type="text" id="register-username" placeholder="Username" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button onclick="register()">Register</button>
+            <p>Already have an account? <a href="javascript:void(0);" onclick="showLogin()">Login</a></p>
+        </div>
+
+        <div id="secured-page" style="display: none;">
+            <h3>Welcome to the secured page!</h3>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
